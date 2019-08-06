@@ -367,3 +367,10 @@ img {
 .home .countries li {
   font-size: 2rem;
 }
+.home .cat-dragging {
+  display: flex;
+  justify-content: space-between;
+}
+.home .cat-dragging div {
+  width: 48%;
+}
