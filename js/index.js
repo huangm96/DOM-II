@@ -96,3 +96,9 @@ const HeadbusImg = document.querySelector('#fun-bus');
     })
   })
 
+  // #11
+  const letsgo =document.querySelector('#smallbus');
+  TweenLite.to(letsgo, 1, {
+    ease: Back.easeIn.config(1.7),
+    y: -500
+  });
