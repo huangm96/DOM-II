@@ -49,9 +49,50 @@ document.addEventListener("dragstart", (e)=> {
   });
 
 //   #6
-// 
-document.getElementById("email_space").addEventListener("focus", (e)=>{
+
+const emailSpace = document.getElementById("email_space");
+emailSpace.addEventListener("focus", (e)=>{
     document.getElementById("email_space").style.backgroundColor = "red";
 
 });
+
+// #7
+window.addEventListener('scroll', (e)=> {
+    if (document.documentElement.scrollTop > 50) {
+        document.querySelector('header').style.background="lightblue";
+    }else{
+        document.querySelector('header').style.background="white";
+    };
+});
+
+//#8
+let clickNum =0;
+window.addEventListener('click', (e)=> {
+    clickNum += 1;
+    console.log(`You clicked ${clickNum} times`);
+});
+
+// #9
+const navList = document.querySelector("nav");
+navList.addEventListener('click', (e)=> {
+    e.target.style.color = "orange";
+});
+
+// #10 
+const HeadbusImg = document.querySelector('#fun-bus');
+
+    HeadbusImg.addEventListener('mouseover', (e) => {
+    TweenMax.to(e.target, 1, {
+      scale: 1.3,
+      filter: 'none',
+      ease: Elastic.easeOut.config( 1, 0.75)
+    })
+})  
+    HeadbusImg.addEventListener('mouseleave', (e) => {
+    TweenMax.to(e.target, 0.5, {
+      scale: 1,
+      filter: 'none',
+      ease: Power1.easeIn
+    })
+  })
 
